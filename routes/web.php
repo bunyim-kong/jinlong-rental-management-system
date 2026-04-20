@@ -16,21 +16,35 @@ Route::get('/maintenance_requests', [MaintenanceRequestController::class, 'index
 
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/contact', function () {
-    return view('contact.contact');
-});
-
-Route::get('/unit', function () {
-    return view('unit/unit');
+    return view('login');
 });
 
 
-Route::get('/payment', function () {
-    return view('payment.payment');
+
+Route::get('/properties', function () {
+    return view('properties/properties');
 });
+
+Route::get('/units', function () {
+    return view('units/units');
+});
+
+Route::get('/tenants', function () {
+    return view('tenants/tenants');
+});
+
+Route::get('/leases', function () {
+    return view('leases/leases');
+});
+
+Route::get('/payments', function () {
+    return view('payments/payments');
+});
+
+Route::get('/maintenance_requests', function () {
+    return view('maintenance_requests/maintenance_requests');
+});
+
 
 
 
