@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RentController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,3 +21,7 @@ Route::get('/payment', function () {
     return view('payment.payment');
 });
 
+
+Route::get('/rent', [RentController::class, 'index']);
+
+  
